@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<g fill="#ABD56C" transform="translate(30 30)"> 
+		<circle r="25" cx="25" cy="25"/>
+		<rect x="0" y="25" height="130" width="50"/>
+		<circle r="25" cx="25" cy="155"/>
+		<rect x="25" y="0" height="50" width="38"/>
+		           <!-- A x-rad,y-rad x-rot large-arc-flag sweep-flag x,y -->
+		<path d="M 63,0 A69,69 0 0 1 83,135"/>
+	</g>
+</svg>

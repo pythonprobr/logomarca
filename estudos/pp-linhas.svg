@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="translate(86 0)" stroke="#ABD56C">
+		<g id="p" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 50;">
+			<polyline points="25,140 25,25 63,25" />
+			<path d="M 63,25 A44,44 0 0 1 76,110" />
+		</g>
+	</g>
+	<use xlink:href="#p"  stroke="#21C2ED" transform="translate(86 0) rotate(180, 25, 140)" />
+	<circle cx="165" cy="102" r="4.5" fill="white" /> 
+	<circle cx="50" cy="163" r="4.5" fill="white" /> 
+</svg>
