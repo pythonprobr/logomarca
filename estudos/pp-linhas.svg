@@ -4,10 +4,10 @@
 		<g id="p" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 60;">
 			<polyline points="30,168 30,30 75.6,30" />
 			<path d="M 75.6,30 A52.8,52.8 0 0 1 91.2,132" />
-		<rect fill="red" stroke="none" x="0" y="108" width="60" height="60" />
 		</g>
 	</g>
 	<use xlink:href="#p"  stroke="#21C2ED" transform="translate(103.2 0) rotate(180, 30, 168)" />
 	<circle cx="198" cy="122.6" r="5.4" fill="white" /> 
 	<circle cx="60" cy="195.6" r="5.4" fill="white" />
+	<rect fill="red" stroke="none" x="103.2" y="108" width="60" height="60" />
 </svg>
