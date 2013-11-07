@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g transform="translate(86 0)" stroke="#ABD56C">
-		<g id="p" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 50;">
-			<polyline points="25,140 25,25 63,25" />
-			<path d="M 63,25 A44,44 0 0 1 76,110" />
+    <g transform="translate(103.2 0)" stroke="#ABD56C">
+		<g id="p" style="fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 60;">
+			<polyline points="30,168 30,30 75.6,30" />
+			<path d="M 75.6,30 A52.8,52.8 0 0 1 91.2,132" />
+		<rect fill="red" stroke="none" x="0" y="108" width="60" height="60" />
 		</g>
 	</g>
-	<use xlink:href="#p"  stroke="#21C2ED" transform="translate(86 0) rotate(180, 25, 140)" />
-	<circle cx="165" cy="102" r="4.5" fill="white" /> 
-	<circle cx="50" cy="163" r="4.5" fill="white" /> 
+	<use xlink:href="#p"  stroke="#21C2ED" transform="translate(103.2 0) rotate(180, 30, 168)" />
+	<circle cx="198" cy="122.6" r="5.4" fill="white" /> 
+	<circle cx="60" cy="195.6" r="5.4" fill="white" />
 </svg>
