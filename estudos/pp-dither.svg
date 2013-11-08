@@ -10,7 +10,7 @@
 	<circle cx="198" cy="122.6" r="5.4" fill="white" /> 
 	<circle cx="60" cy="195.6" r="5.4" fill="white" />
 	
-	<!-- este grupo foi gerado pelo programa gerar_dither.py /-->	
+	<!-- Atkinson's dithering (symmetric variant) /-->	
 	<g stroke="none" transform="translate(103.2, 102)"><rect fill=
 	"#ABD56C" height="3" width="3" x="0" y="0" /><rect fill="#21C2ED"
 	height="3" width="3" x="3" y="0" /><rect fill="#ABD56C" height=
