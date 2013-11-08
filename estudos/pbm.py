@@ -9,7 +9,7 @@ P1
 
 from array import array
 
-def ler_pbm(arq):
+def ler(arq):
 	tipo = None
 	largura = None
 	pixels = []
@@ -32,9 +32,9 @@ def ler_pbm(arq):
 	assert largura == len(pixels[0]), 'largura[0] %d != %d' % (largura, len(pixels[0]))
 	assert largura == len(pixels[-1]), 'largura[-1] %d != %d' % (largura, len(pixels[-1]))
 	assert altura == len(pixels), 'altura %d != %d' % (altura, len(pixels))
-	return largura, altura, pixels
+	return pixels
 	
 if __name__=='__main__':
 	import sys
 	with open(sys.argv[1]) as arq:
-		print(ler_pbm(arq))
+		print(ler(arq))

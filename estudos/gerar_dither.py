@@ -7,26 +7,34 @@
 """
 
 import xml.etree.ElementTree as ET
+import pbm
 
 larg_total = 60
-colunas = 15
+colunas = 20
 linhas = 22
-larg_cel = int(larg_total / colunas)
-alt_cel = larg_cel
 verde = '#ABD56C'
 azul = '#21C2ED'
 
-svg = ET.Element('svg')
-svg.set('xmlns', 'http://www.w3.org/2000/svg')
-g = ET.SubElement(svg, 'g')
-g.set('stroke', 'none')
-for lin in range(linhas):
-	for col in range(colunas):
-		r = ET.SubElement(g, 'rect')
-		x = col * larg_cel
-		y = lin * alt_cel
-		cor = azul if (lin+col) % 2 else verde
-		r.attrib = dict(fill=cor, x=str(x), y=str(y), 
-				width=str(larg_cel), height=str(alt_cel))
+def construir_padrao(svg, pixels, larg_total, colunas):
+	larg_cel = int(larg_total / colunas)
+	alt_cel = larg_cel
+	g = ET.SubElement(svg, 'g')
+	g.set('stroke', 'none')
+	for i, lin in enumerate(pixels):
+		for j, pixel in enumerate(lin[10:10+colunas]):
+			r = ET.SubElement(g, 'rect')
+			x = j * larg_cel
+			y = i * alt_cel
+			cor = verde if pixel else azul
+			r.attrib = dict(fill=cor, x=str(x), y=str(y), 
+					width=str(larg_cel), height=str(alt_cel))
 
-ET.dump(svg)
+if __name__=='__main__':
+	import sys
+	with open(sys.argv[1]) as arq:
+		pixels = pbm.ler(arq)
+		
+	svg = ET.Element('svg')
+	svg.set('xmlns', 'http://www.w3.org/2000/svg')
+	construir_padrao(svg, pixels, larg_total, colunas) 
+	ET.dump(svg)
