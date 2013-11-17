@@ -10,7 +10,7 @@ http://en.wikipedia.org/wiki/Bill_Atkinson
 
 import sys, PIL.Image
 
-img = PIL.Image.open(sys.argv[-1]).convert('L')
+img = PIL.Image.open(sys.argv[1]).convert('L')
 
 threshold = 128*[0] + 128*[255]
 
