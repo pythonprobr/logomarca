@@ -1,17 +1,16 @@
 """
 <svg xmlns="http://www.w3.org/2000/svg">
-<!--cores: verde = #ABD56C  azul = #21C2ED-->
+<!--cores: verde = #ABD56C  azul = #21C2ED--> 
     <rect fill="red" stroke="none" x="0" y="0" width="5" height="5" />
 </svg>
 
 """
 
 import xml.etree.ElementTree as ET
-import atkinson
+import pbm
 
 VERDE = '#ABD56C'
 AZUL = '#21C2ED'
-
 
 def construir_padrao(svg, pixels, larg_total, colunas):
     larg_cel = int(larg_total / colunas)
@@ -24,18 +23,18 @@ def construir_padrao(svg, pixels, larg_total, colunas):
             x = j * larg_cel
             y = i * alt_cel
             cor = VERDE if pixel else AZUL
-            r.attrib = dict(fill=cor, x=str(x), y=str(y),
-                            width=str(larg_cel*1.08), height=str(alt_cel*1.08))
+            r.attrib = dict(fill=cor, x=str(x), y=str(y), 
+                    width=str(larg_cel), height=str(alt_cel))
 
-
-if __name__ == '__main__':
-    larg_total = 60
-    colunas = 20
-    linhas = 22
-    pixels = atkinson.make_bitmap(100, 100, 100)
-    #print(pixels.bits)
-    #print(pixels.size)
+if __name__=='__main__':
+    import sys
+    with open(sys.argv[1]) as arq:
+        pixels = pbm.ler(arq)
+        
     svg = ET.Element('svg')
     svg.set('xmlns', 'http://www.w3.org/2000/svg')
-    construir_padrao(svg, pixels, 60, 20)
+    larg_total = 60
+    colunas = 20
+    #linhas = 22
+    construir_padrao(svg, pixels, larg_total, colunas) 
     ET.dump(svg)
