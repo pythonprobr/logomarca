@@ -8,6 +8,8 @@
 
 import xml.etree.ElementTree as ET
 import atkinson
+import webbrowser
+import os
 
 VERDE = '#ABD56C'
 AZUL = '#21C2ED'
@@ -32,10 +34,13 @@ if __name__ == '__main__':
     larg_total = 60
     colunas = 20
     linhas = 22
-    pixels = atkinson.make_bitmap(100, 100, 100)
+    pixels = atkinson.make_bitmap(100, 100, 40)
     #print(pixels.bits)
     #print(pixels.size)
     svg = ET.Element('svg')
     svg.set('xmlns', 'http://www.w3.org/2000/svg')
-    construir_padrao(svg, pixels, 60, 20)
-    ET.dump(svg)
+    construir_padrao(svg, pixels, 60, 12)
+    with open('saida.svg', 'wb') as saida:
+        saida.write(ET.tostring(svg, encoding='utf-8'))
+        print(os.path.abspath(saida.name))
+        #webbrowser.open('file://'+os.path.abspath(saida.name))
